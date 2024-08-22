@@ -11,7 +11,6 @@ const SignIn = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  console.log(inputValue);
   return (
     <div className="flex items-center justify-center h-[100vh]">
       <div className="w-fit">
