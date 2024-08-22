@@ -39,7 +39,7 @@ const SignIn = () => {
               type="email"
               name="email"
               placeholder="Email"
-              className="flex py-3 px-4 w-[300px] outline-none"
+              className="flex py-3 px-4 w-[18rem] outline-none"
             />
           </label>
           <label htmlFor="password" className="flex items-center">
@@ -52,7 +52,7 @@ const SignIn = () => {
               type="password"
               name="password"
               placeholder="PassWord"
-              className="flex py-3 px-4 w-[300px] outline-none"
+              className="flex py-3 px-4 w-[18rem] outline-none"
             />
           </label>
           <label htmlFor="checkbox" className="flex items-center gap-1">
