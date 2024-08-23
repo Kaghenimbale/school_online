@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { BiSolidUser } from "react-icons/bi";
-import { IoMdUnlock } from "react-icons/io";
+import { TiLockClosed } from "react-icons/ti";
 
 const SignIn = () => {
   const [inputValue, setInputValue] = useState({ email: "", password: "" });
@@ -22,7 +22,7 @@ const SignIn = () => {
         <form
           action=""
           method="post"
-          className="flex flex-col items-start px-12 py-8 rounded-2xl gap-5 bg-slate-300"
+          className="flex flex-col justify-center px-12 py-8 rounded-2xl gap-5 bg-slate-300"
         >
           <div className="flex justify-center w-full">
             <h2 className="font-semibold text-center text-white text-3xl">
@@ -30,7 +30,7 @@ const SignIn = () => {
             </h2>
           </div>
           <label htmlFor="email" className="flex items-center">
-            <div className="p-[0.57rem] bg-white">
+            <div className="px-[0.57rem] h-[50px] flex items-center justify-center bg-white">
               <BiSolidUser className="text-3xl text-slate-400" />
             </div>
             <input
@@ -39,12 +39,12 @@ const SignIn = () => {
               type="email"
               name="email"
               placeholder="Email"
-              className="flex py-3 px-4 w-[18rem] outline-none"
+              className="flex h-[50px] px-4 w-[18rem] outline-none"
             />
           </label>
           <label htmlFor="password" className="flex items-center">
-            <div className="p-[0.57rem] bg-white">
-              <IoMdUnlock className="text-3xl text-slate-400" />
+            <div className="px-[0.57rem] h-[50px] flex items-center justify-center bg-white">
+              <TiLockClosed className="text-3xl text-slate-400" />
             </div>
             <input
               onChange={handleChange}
@@ -52,19 +52,20 @@ const SignIn = () => {
               type="password"
               name="password"
               placeholder="PassWord"
-              className="flex py-3 px-4 w-[18rem] outline-none"
+              className="flex h-[50px] px-4 w-[18rem] outline-none"
             />
           </label>
-          <label htmlFor="checkbox" className="flex items-center gap-1">
+          <label htmlFor="checkbox" className="flex justify-start gap-1">
             <input type="checkbox" placeholder="remember me" name="checkbox" />
-            remember me
+            Remember me
           </label>
           <button
-            className="flex text-white bg-blue-600 py-2 px-6 rounded-full"
+            className="flex text-white w-fit shadow-blue-700 shadow-md bg-blue-600 py-2 px-6 rounded-full"
             type="submit"
           >
-            Sign In
+            LOGIN
           </button>
+          <p className="text-white text-center">Forgot Username / Password ?</p>
         </form>
       </div>
     </div>
