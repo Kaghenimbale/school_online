@@ -13,6 +13,15 @@ const SignIn = () => {
       [e.target.name]: e.target.value,
     }));
   };
+
+  const handleSubmit = (e: any) => {
+    console.log(inputValue);
+    e.preventDefault();
+    setInputValue({
+      email: "",
+      password: "",
+    });
+  };
   return (
     <div className="flex items-center justify-center h-[100vh]">
       <div className="w-fit">
@@ -22,6 +31,7 @@ const SignIn = () => {
         <form
           action=""
           method="post"
+          onSubmit={handleSubmit}
           className="flex flex-col justify-center px-12 py-8 rounded-2xl gap-5 bg-slate-300"
         >
           <div className="flex justify-center w-full">
@@ -60,7 +70,7 @@ const SignIn = () => {
             Remember me
           </label>
           <button
-            className="flex text-white w-fit shadow-blue-700 shadow-md bg-blue-600 py-2 px-6 rounded-full"
+            className="flex text-white w-fit shadow-blue-700 shadow bg-blue-600 py-2 px-6 rounded-full"
             type="submit"
           >
             LOGIN

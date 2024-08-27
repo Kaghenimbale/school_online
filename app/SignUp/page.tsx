@@ -20,6 +20,17 @@ const SignUp = () => {
       [e.target.name]: e.target.value,
     }));
   };
+
+  const handleSubmit = (e: any) => {
+    console.log(inputValue);
+    e.preventDefault();
+    setInputValue({
+      username: "",
+      email: "",
+      password: "",
+      passwordConfirmation: "",
+    });
+  };
   return (
     <div className="flex items-center justify-center h-[100vh]">
       <div className="w-fit">
@@ -27,6 +38,7 @@ const SignUp = () => {
           action=""
           method="post"
           className="flex flex-col justify-center px-12 py-8 rounded-2xl gap-5 bg-slate-300"
+          onSubmit={handleSubmit}
         >
           <div className="flex justify-center w-full">
             <h2 className="font-semibold text-center text-white text-3xl">
@@ -86,13 +98,16 @@ const SignUp = () => {
             />
           </label>
           <button
-            className="flex text-white w-fit shadow-blue-700 shadow-md bg-blue-600 py-2 px-6 rounded-full"
+            className="flex text-white w-fit shadow-blue-700 shadow bg-blue-600 py-2 px-6 rounded-full"
             type="submit"
           >
             CREATE ACCOUNT
           </button>
           <p className="text-white text-center">
-            Already have an account ? <Link href="/SignIn">Login here</Link>
+            Already have an account ?
+            <Link href="/SignIn" className="hover:underline text-blue-500">
+              Login here
+            </Link>
           </p>
         </form>
       </div>
